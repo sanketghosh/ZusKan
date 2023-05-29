@@ -4,6 +4,8 @@
 
 ZusKan is a Zustand-powered Kanban board application that offers efficient task management and agile workflows. It provides a user-friendly interface for organizing and tracking tasks using the Kanban methodology.
 
+![ZusKan Kanban Board](https://example.com/zuskan-screenshot.png)
+
 ## Features
 
 - **Drag-and-Drop Interface**: Easily move tasks between different stages by dragging and dropping them on the Kanban board.

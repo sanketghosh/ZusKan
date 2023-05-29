@@ -1,3 +1,5 @@
+import { useStore } from "../store/store";
+
 function EditIcon() {
   return (
     <svg
@@ -39,18 +41,16 @@ const CARD_ICONS = [
   },
 ];
 
-export default function TaskCard({ color }) {
+export default function TaskCard({ color, task_desc }) {
+  const task = useStore((store) =>
+    store.tasks.find((task) => task.task_desc === task_desc)
+  );
+
   return (
     <div
       className={`w-full h-44 lg:h-52 ${color} rounded-lg p-2 relative text-gray-900`}
     >
-      <div className="text-xs lg:text-sm font-medium">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quas
-        delectus blanditiis amet quod cumque nisi ratione odio, libero
-        consequatur vel magni, expedita eaque? Eaque ut, repellat quasi iusto
-        pariatur maiores possimus provident numquam molestias hic perferendis
-        molestiae, fugit sint?
-      </div>
+      <div className="text-xs lg:text-sm font-medium">{task.task_desc}</div>
       <div className="text-gray-800 flex items-center absolute gap-3 bottom-3 right-4">
         {CARD_ICONS.map((icon, idx) => {
           return (

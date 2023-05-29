@@ -28,3 +28,11 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-zinc-950;
 }
+
+.modalCard {
+  @apply bg-gray-900 absolute h-[22rem] lg:h-[24rem] w-[95%] lg:w-2/4 rounded-xl border-2 border-gray-700 p-3 md:p-5 xl:p-10;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
